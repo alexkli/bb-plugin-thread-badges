@@ -1,5 +1,5 @@
 {
-  "name": "bb-plugin-row-info",
+  "name": "bb-plugin-thread-badges",
   "version": "0.1.0",
   "type": "module",
   "engines": {
@@ -7,7 +7,7 @@
     "bbPluginSdk": ">=0.6.132"
   },
   "bb": {
-    "name": "Row Info",
+    "name": "Thread Badges",
     "description": "Show each thread's git branch and pull request under its title in the sidebar.",
     "branding": {
       "icon": "GitBranch"

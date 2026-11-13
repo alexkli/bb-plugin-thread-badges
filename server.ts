@@ -1,4 +1,4 @@
-// bb-plugin-row-info — backend entry.
+// bb-plugin-thread-badges — backend entry.
 //
 // The plugin is frontend-only: app.tsx draws items on each sidebar thread
 // row's metadata line from data owned by bb's Git (`bb--git`) and GitHub PR

@@ -1,4 +1,4 @@
-// bb-plugin-row-info — frontend entry.
+// bb-plugin-thread-badges — frontend entry.
 //
 // Adds an item to the metadata line under each sidebar thread title: the
 // git branch and its pull request. Each item is one
@@ -37,7 +37,7 @@ const DEFAULT_SETTINGS: Settings = {
   showPullRequest: true,
 };
 
-function useRowInfoSettings(): Settings {
+function useThreadBadgesSettings(): Settings {
   const { values } = useSettings();
   const flag = (key: keyof Settings) =>
     typeof values?.[key] === "boolean" ? (values[key] as boolean) : DEFAULT_SETTINGS[key];
@@ -132,7 +132,7 @@ interface GitData {
 }
 
 function useGitData({ threads }: DataInput): GitData {
-  const settings = useRowInfoSettings();
+  const settings = useThreadBadgesSettings();
   const keys = environmentIds(threads);
   const branches = useRpcKeyedQuery({
     pluginId: "bb--git",
@@ -284,7 +284,7 @@ function GitItem({ thread, data }: ItemProps<GitData>) {
 // still shows bb's badge. It relies on bb's markup: each item sits in a
 // `[data-bb-plugin="<id>"]` wrapper directly inside `[data-thread-row-metadata]`.
 
-const PR_ITEM_ATTRIBUTE = "data-row-info-pull-request";
+const PR_ITEM_ATTRIBUTE = "data-thread-badges-pull-request";
 const HIDE_BUILT_IN_BADGE_CSS = `
 [data-thread-row-metadata]:has([${PR_ITEM_ATTRIBUTE}]) > [data-bb-plugin="bb--github-pr-status"] {
   display: none !important;
@@ -292,7 +292,7 @@ const HIDE_BUILT_IN_BADGE_CSS = `
 
 function hideBuiltInBadge() {
   const style = document.createElement("style");
-  style.dataset.rowInfo = "hide-built-in-pr-badge";
+  style.dataset.threadBadges = "hide-built-in-pr-badge";
   style.textContent = HIDE_BUILT_IN_BADGE_CSS;
   document.head.append(style);
   return () => style.remove();

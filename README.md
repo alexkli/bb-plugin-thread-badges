@@ -1,4 +1,4 @@
-# Row Info (bb plugin)
+# Thread Badges (bb plugin)
 
 Adds one item to the metadata line under each thread title in bb's sidebar:
 
@@ -26,10 +26,10 @@ bb thread-list prefs set showRowMetadata true
 ## Settings
 
 ```sh
-bb plugin config row-info                          # show
-bb plugin config row-info set showPullRequest true
-bb plugin config row-info set hideDefaultBranch false
-bb plugin config row-info set showBranch false
+bb plugin config thread-badges                      # show
+bb plugin config thread-badges set showPullRequest true
+bb plugin config thread-badges set hideDefaultBranch false
+bb plugin config thread-badges set showBranch false
 ```
 
 ## Adding an item
