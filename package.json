@@ -46,5 +46,9 @@
     "tailwind-merge": "^3.7.0",
     "vaul": "^1.1.2"
   },
-  "description": "Shows each thread's git branch and GitHub pull request on its sidebar row."
+  "description": "Shows each thread's git branch and GitHub pull request on its sidebar row.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexkli/bb-plugin-thread-badges.git"
+  }
 }
