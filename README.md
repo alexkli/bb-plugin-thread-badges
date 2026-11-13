@@ -2,6 +2,8 @@
 
 Adds one item to the metadata line under each thread title in bb's sidebar:
 
+<img src="docs/screenshot.png" width="436" alt="bb sidebar thread row showing the branch test-bb-pr and merged pull request #12 under the thread title">
+
 ```
 ⇡ feature-x #42 ✕     PR: icon and number in the PR state's color, branch in muted gray
 ⑂ feature-x           no PR: muted branch icon
