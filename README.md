@@ -46,3 +46,7 @@ component. Items draw left to right by `order`.
 bb plugin install .   # once
 bb plugin dev         # rebuild and reload on save
 ```
+
+## License
+
+MIT
